@@ -1,0 +1,162 @@
+# ───────────────────────────────────────────────────────────────
+# Restaurant Zum Netzroller – CMS configuration (Sveltia / Decap compatible)
+# Editors manage content here; saving commits to GitHub and the site
+# updates automatically. See ../CMS-SETUP.md for first-time setup.
+# ───────────────────────────────────────────────────────────────
+
+backend:
+  name: github
+  repo: julianito03/zum-netzroller        # <-- GitHub repo (owner/name)
+  branch: main
+  # ── Optional one-click "Sign in with GitHub" ──
+  # After deploying the auth worker (cms-auth/), uncomment and paste the URL:
+  # base_url: https://zum-netzroller-cms.<your-subdomain>.workers.dev
+  # Until then, editors sign in with a fine-grained Personal Access Token.
+
+site_url: https://julianito03.github.io/zum-netzroller/
+display_url: https://julianito03.github.io/zum-netzroller/
+logo_url: https://julianito03.github.io/zum-netzroller/assets/cms-logo.svg
+locale: de
+
+media_folder: "assets/img"
+public_folder: "assets/img"
+
+collections:
+  # ── Quick help for editors ────────────────────────────────────
+  - name: hilfe
+    label: "ℹ️ Anleitung"
+    icon: help
+    editor: { preview: false }
+    files:
+      - name: hilfe
+        label: "So funktioniert's"
+        file: "content/help.md"
+        description: "Kurze Anleitung zum Bearbeiten der Website. (Nur zum Nachlesen.)"
+        fields:
+          - { label: "Anleitung", name: body, widget: markdown }
+
+  # ── Menu ──────────────────────────────────────────────────────
+  - name: speisekarte
+    label: "🍝 Speisekarte"
+    icon: restaurant
+    editor: { preview: false }
+    files:
+      - name: speisekarte
+        label: "Speisekarte"
+        file: "content/menu.json"
+        description: "Die Speisekarte. Jede Kategorie (Antipasti, Pizza …) ist ein Abschnitt mit Gerichten. Gericht hinzufügen: unten auf „+ Gericht“. Reihenfolge per Drag-and-drop. Danach „Save“."
+        fields:
+          - label: "Kategorien"
+            name: sections
+            widget: list
+            label_singular: "Kategorie"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Überschrift", name: title, widget: string, hint: "z. B. Pizza dal forno" }
+              - { label: "Anker (optional, für Links – nur Kleinbuchstaben)", name: anchor, widget: string, required: false }
+              - { label: "Hinweis unter der Kategorie (optional)", name: note, widget: string, required: false }
+              - label: "Gerichte"
+                name: items
+                widget: list
+                label_singular: "Gericht"
+                summary: "{{fields.name}} — {{fields.price}}"
+                fields:
+                  - { label: "Name", name: name, widget: string }
+                  - { label: "Preis", name: price, widget: string, required: false, hint: "z. B. 8,50 €" }
+                  - { label: "Kennzeichnung (optional)", name: tag, widget: string, required: false, hint: "z. B. Klassiker, scharf, vegetarisch" }
+                  - { label: "Beschreibung (optional)", name: desc, widget: text, required: false }
+
+  # ── Reviews ───────────────────────────────────────────────────
+  - name: bewertungen
+    label: "⭐ Bewertungen"
+    icon: star
+    editor: { preview: false }
+    files:
+      - name: bewertungen
+        label: "Gäste-Stimmen (Startseite)"
+        file: "content/reviews.json"
+        description: "Kurze Zitate zufriedener Gäste, die auf der Startseite erscheinen."
+        fields:
+          - label: "Bewertungen"
+            name: items
+            widget: list
+            label_singular: "Bewertung"
+            summary: "{{fields.name}} ({{fields.stars}}★)"
+            fields:
+              - { label: "Name", name: name, widget: string }
+              - { label: "Quelle", name: source, widget: string, default: "Google", required: false }
+              - { label: "Sterne (1–5)", name: stars, widget: number, default: 5, min: 1, max: 5, value_type: int }
+              - { label: "Text", name: text, widget: text }
+
+  # ── Site images ───────────────────────────────────────────────
+  - name: images
+    label: "Bilder"
+    icon: image
+    editor: { preview: false }
+    files:
+      - name: images
+        label: "Website-Bilder"
+        file: "content/images.json"
+        description: "Hauptfotos der Website. Auf ein Bild klicken → neues Foto hochladen → „Save“. Tipp: Querformat-Fotos wirken in den großen Flächen am besten."
+        fields:
+          - { label: "Hero / Startseite (großes Titelbild)", name: hero, widget: image }
+          - { label: "Ambiente / Restaurant innen", name: ambiance, widget: image }
+          - { label: "Terrasse / außen", name: terrace, widget: image }
+          - { label: "Saal (echtes Foto)", name: interior, widget: image }
+          - { label: "Pizza", name: pizza, widget: image }
+          - { label: "Pasta", name: pasta, widget: image }
+          - { label: "Antipasti", name: antipasti, widget: image }
+          - { label: "Dessert", name: dessert, widget: image }
+          - { label: "Wein", name: wine, widget: image }
+          - { label: "Küche / Chefkoch", name: chef, widget: image }
+          - { label: "Außenansicht Gebäude", name: exterior, widget: image }
+          - { label: "Speisekarte-Titelbild", name: menu_feature, widget: image }
+          - { label: "Kontakt-Titelbild", name: kontakt_hero, widget: image }
+          - { label: "Reservieren-Titelbild", name: reservieren_hero, widget: image }
+
+  # ── Page texts ────────────────────────────────────────────────
+  - name: texts
+    label: "Seitentexte"
+    icon: edit_note
+    editor: { preview: false }
+    files:
+      - name: texts
+        label: "Texte"
+        file: "content/texts.json"
+        description: "Texte der Startseite und allgemeine Angaben. Hinweis: Im Feld „Titel (Hero)“ steht ein <br> für den Zeilenumbruch – bitte stehen lassen."
+        fields:
+          - label: "Startseite"
+            name: home
+            widget: object
+            collapsed: false
+            fields:
+              - { label: "Hero – kleine Zeile oben", name: hero_eyebrow, widget: string }
+              - { label: "Hero – Titel (mit <br> Zeilenumbruch)", name: hero_title, widget: string }
+              - { label: "Hero – Text", name: hero_text, widget: text }
+              - { label: "Hero – Button 1", name: hero_cta1, widget: string }
+              - { label: "Hero – Button 2", name: hero_cta2, widget: string }
+              - { label: "Intro – kleine Zeile", name: intro_eyebrow, widget: string }
+              - { label: "Intro – Titel", name: intro_title, widget: string }
+              - { label: "Intro – Text", name: intro_text, widget: text }
+              - { label: "Block 1 – kleine Zeile", name: split1_eyebrow, widget: string }
+              - { label: "Block 1 – Titel", name: split1_title, widget: string }
+              - { label: "Block 1 – Text", name: split1_text, widget: text }
+              - { label: "Block 2 – kleine Zeile", name: split2_eyebrow, widget: string }
+              - { label: "Block 2 – Titel", name: split2_title, widget: string }
+              - { label: "Block 2 – Text", name: split2_text, widget: text }
+              - { label: "Bewertungen – Titel", name: reviews_title, widget: string }
+              - { label: "Speisekarte-Vorschau – Titel", name: menu_title, widget: string }
+              - { label: "Speisekarte-Vorschau – Text", name: menu_text, widget: text }
+              - { label: "Abschluss-Banner – Titel", name: cta_title, widget: string }
+              - { label: "Abschluss-Banner – Text", name: cta_text, widget: text }
+          - label: "Allgemeine Angaben"
+            name: info
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Adresse", name: address, widget: string }
+              - { label: "Telefon", name: phone, widget: string }
+              - { label: "E-Mail", name: email, widget: string }
+              - { label: "Preis pro Person", name: price, widget: string }
+              - { label: "Bewertung", name: rating, widget: string }
+              - { label: "Anzahl Bewertungen", name: reviews_count, widget: string }

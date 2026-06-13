@@ -1,0 +1,55 @@
+{
+  "sections": [
+    {
+      "title": "Antipasti",
+      "items": [
+        { "name": "Bruschetta", "price": "6,50 €", "desc": "Geröstetes Brot mit frischen Tomaten, Knoblauch, Basilikum und Olivenöl" },
+        { "name": "Vitello Tonnato", "price": "11,90 €", "desc": "Dünn geschnittenes Kalbfleisch mit Thunfischsauce und Kapern" },
+        { "name": "Antipasti Misto", "price": "12,90 €", "tag": "für 2", "desc": "Bunte Vorspeisenplatte mit Schinken, gegrilltem Gemüse und Mozzarella" },
+        { "name": "Insalata Caprese", "price": "8,90 €", "desc": "Tomaten, Büffelmozzarella und Basilikum, Olivenöl" }
+      ]
+    },
+    {
+      "title": "Pizza dal forno",
+      "anchor": "pizza",
+      "note": "Alle Pizzen aus dem Steinofen. Gerne auch zum Mitnehmen.",
+      "items": [
+        { "name": "Margherita", "price": "8,50 €", "tag": "Klassiker", "desc": "Tomaten, Mozzarella, Basilikum" },
+        { "name": "Prosciutto e Funghi", "price": "10,50 €", "desc": "Tomaten, Mozzarella, Schinken, Champignons" },
+        { "name": "Salame", "price": "10,50 €", "desc": "Tomaten, Mozzarella, scharfe Salami" },
+        { "name": "Quattro Stagioni", "price": "11,90 €", "desc": "Schinken, Champignons, Artischocken, Paprika" },
+        { "name": "Pizza Netzroller", "price": "12,90 €", "tag": "Haus-Spezial", "desc": "Tomaten, Mozzarella, Parmaschinken, Rucola, Parmesan" },
+        { "name": "Diavola", "price": "11,50 €", "tag": "scharf", "desc": "Tomaten, Mozzarella, scharfe Salami, Peperoni" }
+      ]
+    },
+    {
+      "title": "Pasta",
+      "note": "Gerne auch mit glutenfreier Pasta – fragen Sie unser Team.",
+      "items": [
+        { "name": "Spaghetti Bolognese", "price": "9,90 €", "desc": "Mit hausgemachter Hackfleischsauce" },
+        { "name": "Spaghetti Carbonara", "price": "10,50 €", "desc": "Mit Speck, Ei, Sahne und Parmesan" },
+        { "name": "Tagliatelle al Salmone", "price": "12,90 €", "desc": "Bandnudeln mit frischem Lachs in Sahnesauce" },
+        { "name": "Penne Arrabbiata", "price": "9,50 €", "tag": "vegetarisch", "desc": "In pikanter Tomatensauce mit Knoblauch und Chili" },
+        { "name": "Lasagne al Forno", "price": "11,50 €", "desc": "Hausgemacht, überbacken aus dem Ofen" }
+      ]
+    },
+    {
+      "title": "Secondi & Klassiker",
+      "items": [
+        { "name": "Saltimbocca alla Romana", "price": "17,90 €", "desc": "Kalbsschnitzel mit Parmaschinken und Salbei, dazu Beilage" },
+        { "name": "Wiener Schnitzel", "price": "15,90 €", "desc": "Vom Schwein, mit Pommes und Salat" },
+        { "name": "Scaloppine al Limone", "price": "16,90 €", "desc": "Kalbsmedaillons in Zitronensauce" },
+        { "name": "Branzino", "price": "18,90 €", "desc": "Gegrillter Wolfsbarsch mit mediterranem Gemüse" }
+      ]
+    },
+    {
+      "title": "Dolci & Caffè",
+      "items": [
+        { "name": "Tiramisù", "price": "5,90 €", "tag": "hausgemacht", "desc": "Das italienische Original mit Mascarpone und Espresso" },
+        { "name": "Panna Cotta", "price": "5,50 €", "desc": "Mit Fruchtspiegel nach Wahl" },
+        { "name": "Espresso", "price": "2,40 €", "desc": "" },
+        { "name": "Cappuccino", "price": "3,20 €", "desc": "" }
+      ]
+    }
+  ]
+}

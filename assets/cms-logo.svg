@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" width="96" height="96" role="img" aria-label="Zum Netzroller">
+  <rect width="96" height="96" rx="24" fill="#6e3c48"/>
+  <circle cx="48" cy="48" r="24" fill="#f4ece3"/>
+  <circle cx="48" cy="48" r="24" fill="none" stroke="#c79a4b" stroke-width="2" opacity="0.6"/>
+  <path d="M26 38 Q48 49 70 38" fill="none" stroke="#a87d33" stroke-width="3.2" stroke-linecap="round"/>
+  <path d="M26 58 Q48 47 70 58" fill="none" stroke="#a87d33" stroke-width="3.2" stroke-linecap="round"/>
+</svg>

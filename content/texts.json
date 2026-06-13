@@ -1,0 +1,31 @@
+{
+  "home": {
+    "hero_eyebrow": "Ristorante · Pizzeria · Biblis",
+    "hero_title": "Italienische Gastfreundschaft –<br>mitten in Biblis.",
+    "hero_text": "Knusprige Pizza aus dem Ofen, hausgemachte Pasta und ein Glas guter Wein – im Restaurant Zum Netzroller verbinden wir italienische Küche mit der herzlichen Atmosphäre unseres Clubhauses am Tennisplatz.",
+    "hero_cta1": "Tisch reservieren",
+    "hero_cta2": "Zur Speisekarte",
+    "intro_eyebrow": "Benvenuti",
+    "intro_title": "Essen, trinken, genießen – wie in Bella Italia",
+    "intro_text": "Ob nach dem Spiel, zum Familienessen oder für den Feierabend: Bei uns sind Sie willkommen. Frische Zutaten, ehrliche Küche und ein Lächeln gehören für uns einfach dazu.",
+    "split1_eyebrow": "Unsere Küche",
+    "split1_title": "Pizza, Pasta & mehr – mit Liebe gemacht",
+    "split1_text": "Vom Holzofen-Klassiker bis zur hausgemachten Pasta: Wir kochen mit frischen Zutaten und echten italienischen Rezepten.",
+    "split2_eyebrow": "Das Haus",
+    "split2_title": "Mehr als nur ein Restaurant",
+    "split2_text": "Unser Saal bietet Platz für Feiern, Vereinsabende und Gesellschaften – mit Blick auf die Anlage und gemütlicher Atmosphäre.",
+    "reviews_title": "Das sagen unsere Gäste",
+    "menu_title": "Ein Vorgeschmack auf unsere Karte",
+    "menu_text": "Eine kleine Auswahl – die ganze Vielfalt finden Sie auf unserer Speisekarte.",
+    "cta_title": "Reservieren Sie Ihren Tisch",
+    "cta_text": "Ob zu zweit oder in großer Runde – wir freuen uns auf Ihren Besuch im Zum Netzroller."
+  },
+  "info": {
+    "address": "Josef-Seib-Straße 7, 68647 Biblis",
+    "phone": "06245 5555",
+    "email": "info@restaurant-zum-netzroller.de",
+    "price": "20–30 € pro Person",
+    "rating": "4,6",
+    "reviews_count": "715"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "items": [
+    { "name": "Sabine K.", "source": "Google", "stars": 5, "text": "Super leckeres Essen, freundliche Bedienung und gemütliche Atmosphäre. Die Pizza kommt knusprig aus dem Ofen – wir kommen gerne wieder!" },
+    { "name": "Markus W.", "source": "Google", "stars": 5, "text": "Tolles italienisches Restaurant in Biblis. Große Portionen, faire Preise und sehr nettes Personal. Der Saal eignet sich auch prima für Feiern." },
+    { "name": "Andrea L.", "source": "Google", "stars": 4, "text": "Hausgemachte Pasta und ein gutes Glas Wein – genau richtig nach dem Tennis. Schöner Familienbetrieb mit Herz." }
+  ]
+}

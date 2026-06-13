@@ -1,0 +1,16 @@
+{
+  "hero": "assets/img/hero.jpg",
+  "ambiance": "assets/img/ambiance.jpg",
+  "terrace": "assets/img/terrace.jpg",
+  "interior": "assets/img/interior-real.jpg",
+  "pizza": "assets/img/pizza.jpg",
+  "pasta": "assets/img/pasta.jpg",
+  "antipasti": "assets/img/antipasti.jpg",
+  "dessert": "assets/img/dessert.jpg",
+  "wine": "assets/img/wine.jpg",
+  "chef": "assets/img/chef.jpg",
+  "exterior": "assets/img/exterior-real.jpg",
+  "menu_feature": "assets/img/pasta.jpg",
+  "kontakt_hero": "assets/img/ambiance.jpg",
+  "reservieren_hero": "assets/img/terrace.jpg"
+}
