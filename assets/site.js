@@ -24,6 +24,15 @@
       (n) => `<a href="${n.href}"${n.href === current ? ' class="active"' : ""}>${n.label}</a>`
     ).join("");
     return `
+    <div class="topbar">
+      <div class="container">
+        <span class="tb-hide">Josef-Seib-Straße 7 · 68647 Biblis</span>
+        <div class="tb-right">
+          <span>Di–So geöffnet</span>
+          <a href="tel:${PHONE_TEL}">Tel. ${PHONE}</a>
+        </div>
+      </div>
+    </div>
     <header class="site-header">
       <div class="container nav">
         <a class="brand" href="index.html">
